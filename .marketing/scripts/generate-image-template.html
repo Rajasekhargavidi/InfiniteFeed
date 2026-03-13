@@ -1,0 +1,66 @@
+<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, height=627">
+  <title>LinkedIn Post Image</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 627px;
+      font-family: 'DM Sans', sans-serif;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 64px;
+    }
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+    .subline {
+      font-size: 20px;
+      opacity: 0.9;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+    .brand {
+      position: absolute;
+      bottom: 48px;
+      left: 64px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    .accent {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="accent"></div>
+  <h1 class="headline" id="headline">Replace with your post headline</h1>
+  <p class="subline" id="subline">Supporting text or key message for the post.</p>
+  <span class="brand" id="brand">Your Company Name</span>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('headline').textContent = params.get('headline') || 'Your Post Headline';
+    document.getElementById('subline').textContent = params.get('subline') || 'Supporting message or key takeaway.';
+    document.getElementById('brand').textContent = params.get('brand') || 'Your Company';
+  </script>
+</body>
+</html>
+<!-- AI Generated Code by Deloitte + Cursor (END) -->

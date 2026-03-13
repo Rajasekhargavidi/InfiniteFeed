@@ -1,0 +1,25 @@
+# AI Generated Code by Deloitte + Cursor (BEGIN)
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Generated images (optional - remove if you want to track)
+.marketing/posts/images/*.png
+.marketing/posts/images/*.jpg
+
+# Logs
+*.log
+npm-debug.log*
+# AI Generated Code by Deloitte + Cursor (END)
