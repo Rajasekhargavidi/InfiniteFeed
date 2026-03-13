@@ -2,65 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#3b82f6">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>LinkedIn Post Agent</title>
+  <title>LinkedIn Post Agent | LaravisionX</title>
+  <meta name="description" content="Generate LinkedIn posts with image, text, and SEO tags. Works offline. Free.">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%233b82f6' width='100' height='100'/><text x='50' y='60' font-size='40' fill='white' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100'/><text x='50' y='62' font-size='36' fill='white' text-anchor='middle' font-family='sans-serif'>P</text></svg>">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <div class="app">
-    <header>
-      <h1>LinkedIn Post Agent</h1>
-      <p>Generate posts offline — image, text, SEO tags</p>
-      <span class="status" id="status">Offline ready</span>
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="badge">LaravisionX</span>
+        <h1>LinkedIn Post Agent</h1>
+        <p class="hero-tagline">Where Smart Insight Breeds Bold Innovation</p>
+        <p class="hero-desc">Generate professional posts with image, text & SEO — works offline, no signup</p>
+        <span class="status" id="status">Offline ready</span>
+      </div>
     </header>
 
-    <main>
-      <section class="input-section">
-        <label>Topic for your post</label>
-        <input type="text" id="topic" placeholder="e.g. AI trends, product launch, team update">
+    <main class="main">
+      <section class="input-section card">
+        <h2 class="section-title">Create your post</h2>
+        <label for="topic">Topic</label>
+        <input type="text" id="topic" placeholder="e.g. AI trends, product launch, team update" autocomplete="off">
+        <label for="postType">Post type</label>
         <select id="postType">
           <option value="thought_leadership">Thought leadership</option>
           <option value="product_highlight">Product highlight</option>
           <option value="tip_insight">Tip / Insight</option>
         </select>
-        <button id="generateBtn">Generate Post</button>
+        <button id="generateBtn" class="btn-primary">
+          <span class="btn-text">Generate Post</span>
+        </button>
       </section>
 
       <section class="output-section" id="outputSection">
-        <h2>Generated Post</h2>
-        <div class="output-card">
-          <h3>Copy (for LinkedIn)</h3>
-          <textarea id="copy" readonly placeholder="Click Generate Post above to create your LinkedIn post."></textarea>
-          <button class="copyBtn" data-target="copy">Copy</button>
+        <h2 class="section-title">Generated Post</h2>
+        <div class="output-card card">
+          <div class="card-header">
+            <h3>Copy for LinkedIn</h3>
+            <button class="copyBtn btn-secondary" data-target="copy">Copy</button>
+          </div>
+          <textarea id="copy" readonly placeholder="Click Generate Post to create your content."></textarea>
         </div>
-        <div class="output-card">
-          <h3>Hashtags & SEO</h3>
-          <p id="hashtags"></p>
-          <p id="seo"></p>
-          <button class="copyBtn" data-target="hashtags">Copy hashtags</button>
+        <div class="output-card card">
+          <div class="card-header">
+            <h3>Hashtags & SEO</h3>
+            <button class="copyBtn btn-secondary" data-target="hashtags">Copy</button>
+          </div>
+          <p id="hashtags" class="hashtags"></p>
+          <p id="seo" class="seo-text"></p>
         </div>
-        <div class="output-card">
-          <h3>Optimal time</h3>
-          <p id="optimalTime"></p>
+        <div class="output-card card">
+          <h3>Best time to post</h3>
+          <p id="optimalTime" class="optimal-time"></p>
         </div>
-        <div class="output-card">
-          <h3>Image</h3>
-          <canvas id="imageCanvas" width="1200" height="627"></canvas>
-          <button id="downloadImage">Download image</button>
+        <div class="output-card card">
+          <h3>Post image</h3>
+          <div class="canvas-wrap">
+            <canvas id="imageCanvas" width="1200" height="627"></canvas>
+          </div>
+          <button id="downloadImage" class="btn-secondary">Download image</button>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>LaravisionX · Works offline · Free</p>
+    <footer class="footer">
+      <p class="footer-brand">LaravisionX</p>
+      <p class="footer-tagline">Works offline · Free · No signup</p>
       <button id="clearCacheBtn" class="clearCacheBtn">Clear cache & reload</button>
     </footer>
   </div>
-  <script src="js/app.js?v=2"></script>
+  <script src="js/app.js?v=3"></script>
 </body>
 </html>
