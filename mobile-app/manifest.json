@@ -1,0 +1,14 @@
+{
+  "name": "LinkedIn Post Agent",
+  "short_name": "Post Agent",
+  "description": "Generate LinkedIn posts with image, text, SEO tags. Works offline.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "https://via.placeholder.com/192/3b82f6/ffffff?text=Post", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://via.placeholder.com/512/3b82f6/ffffff?text=Post", "sizes": "512x512", "type": "image/png" }
+  ]
+}

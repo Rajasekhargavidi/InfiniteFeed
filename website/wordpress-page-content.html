@@ -1,0 +1,126 @@
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<div class="lara-agent-page">
+  <style>
+    .lara-agent-page * { box-sizing: border-box; }
+    .lara-agent-page {
+      font-family: 'DM Sans', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .lara-agent-page .agent-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+      padding: 48px 24px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 32px;
+    }
+    .lara-agent-page .agent-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      margin-bottom: 8px;
+    }
+    .lara-agent-page .agent-accent {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      margin: 16px auto;
+      border-radius: 2px;
+    }
+    .lara-agent-page .agent-header p { opacity: 0.9; font-size: 16px; }
+    .lara-agent-page section { margin-bottom: 36px; }
+    .lara-agent-page h2 { font-size: 22px; margin-bottom: 12px; color: #0f172a; }
+    .lara-agent-page .agent-ul { list-style: none; padding: 0; }
+    .lara-agent-page .agent-ul li {
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+    .lara-agent-page .agent-ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+    .lara-agent-page .agent-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+    .lara-agent-page .agent-card h3 { font-size: 17px; margin-bottom: 6px; color: #0f172a; }
+    .lara-agent-page .agent-card p { color: #64748b; font-size: 15px; }
+    .lara-agent-page .agent-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      color: #fff !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      font-weight: 600;
+      margin: 8px 12px 8px 0;
+      transition: opacity 0.2s;
+    }
+    .lara-agent-page .agent-cta:hover { opacity: 0.9; }
+    .lara-agent-page .agent-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+  </style>
+
+  <div class="agent-header">
+    <h1>AI LinkedIn Marketing Agent</h1>
+    <div class="agent-accent"></div>
+    <p>Where Smart Insight Breeds Bold Innovation</p>
+    <p style="margin-top: 6px; font-size: 15px;">Generate posts, images, hashtags & optimal times — 100% free</p>
+  </div>
+
+  <section>
+    <h2>What It Does</h2>
+    <p style="margin-bottom: 16px;">Our AI-powered agent creates LinkedIn-ready content tailored to your brand. Give it a topic, get a complete post with copy, image brief, hashtags, and the best time to post.</p>
+    <ul class="agent-ul">
+      <li>Professional post copy (1300–2000 chars, LinkedIn-optimized)</li>
+      <li>Image brief or HTML template for visuals</li>
+      <li>3–5 relevant hashtags + SEO keywords</li>
+      <li>Optimal posting time by industry & timezone</li>
+      <li>10-minute reminder before post time</li>
+      <li>Response templates for comments & DMs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="agent-features">
+      <div class="agent-card">
+        <h3>1. You Request</h3>
+        <p>Tell the agent your topic: "AI trends", "product launch", "team update", or anything relevant to your audience.</p>
+      </div>
+      <div class="agent-card">
+        <h3>2. Agent Generates</h3>
+        <p>Gets new copy, image brief, hashtags, and optimal time — tailored to your company profile and target audience.</p>
+      </div>
+      <div class="agent-card">
+        <h3>3. You Post</h3>
+        <p>Review, approve, and post to LinkedIn. Manual or scheduled — you stay in control.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>100% Free</h2>
+    <p style="margin-bottom: 12px;">No API keys, no subscriptions, no Zapier required. Works with Cursor IDE and our open-source scripts.</p>
+    <a href="https://github.com/Rajasekhargavidi/Infinte" class="agent-cta" target="_blank" rel="noopener">View on GitHub</a>
+  </section>
+
+  <section>
+    <h2>Get Started</h2>
+    <p>Interested in using this for your brand? We can help you set it up or customize it for your needs.</p>
+    <a href="https://laravisionx.com/#contact" class="agent-cta">Contact Us</a>
+    <a href="https://www.linkedin.com/company/laravisionx" class="agent-cta" style="background: #0a66c2;">Follow on LinkedIn</a>
+  </section>
+</div>

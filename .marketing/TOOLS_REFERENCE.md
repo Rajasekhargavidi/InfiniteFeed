@@ -59,7 +59,17 @@ node .marketing/scripts/prepare-post-context.js "AI product launch" product_high
 
 ---
 
-### 4. Image Generation (3 methods)
+### 4. Free Image URLs (no API)
+
+**Path:** `.marketing/scripts/get-free-image-urls.js`
+
+Outputs free stock photo URLs (Picsum) for 1200x627. No API key.
+
+```bash
+node .marketing/scripts/get-free-image-urls.js [technology|business|marketing]
+```
+
+### 5. Image Generation (3 methods)
 
 #### Method A: HTML Template + Browser Screenshot
 
@@ -87,13 +97,15 @@ Use `cursor-ide-browser` canvas tool to create custom HTML/CSS visuals, then scr
 
 ## MCP Tools Used
 
-| Tool | Purpose |
-|------|---------|
-| `browser_navigate` | Open image HTML template |
-| `browser_resize` | Set viewport to 1200x627 |
-| `browser_take_screenshot` | Capture post image |
-| `get_configuration_url` (Zapier) | Add/remove Zapier actions |
-| `openai_*` / `linkedin_*` / `buffer_*` | When configured in Zapier |
+| Tool | Purpose | Required? |
+|------|---------|-----------|
+| `browser_navigate` | Open image HTML template | No (can use local file) |
+| `browser_resize` | Set viewport to 1200x627 | For screenshot |
+| `browser_take_screenshot` | Capture post image | For free image method |
+| `get_configuration_url` (Zapier) | Add/remove Zapier actions | Optional |
+| `openai_*` / `linkedin_*` / `buffer_*` | When configured in Zapier | Optional (paid) |
+
+**100% free:** Use HTML template + manual screenshot. No MCP required for core workflow.
 
 ---
 
