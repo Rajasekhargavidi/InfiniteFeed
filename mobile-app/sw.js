@@ -1,4 +1,4 @@
-const CACHE = 'linkedin-agent-v1';
+const CACHE = 'linkedin-agent-v2';
 const FILES = ['index.html', 'manifest.json', 'css/app.css', 'js/app.js'];
 
 self.addEventListener('install', (e) => {

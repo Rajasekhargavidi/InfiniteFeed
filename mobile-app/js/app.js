@@ -6,15 +6,15 @@
 
   const TEMPLATES = {
     thought_leadership: {
-      copy: (topic) => `The future of ${topic} isn't about technology. It's about who uses it.\n\nHere's what we're seeing:\n\n→ Expectations have shifted. Customers want instant, intelligent responses.\n→ Competition has leveled. Smaller teams punch above their weight.\n→ Talent is the new bottleneck. Upskilling isn't optional anymore.\n\nThe businesses winning today aren't the ones with the biggest budgets. They're the ones moving fastest.\n\nWhere are you in your journey? Drop a comment — let's talk.`,
+      copy: (topic) => `The future of ${topic} isn't about technology. It's about who uses it.\n\nFounders who automate. Marketers who personalize at scale. Sales teams who close faster with data-driven insights.\n\nThe gap isn't technology — it's adoption.\n\nHere's what we're seeing:\n\n→ Customer expectations have shifted. They want instant, intelligent responses.\n→ Competition has leveled. Smaller teams punch above their weight.\n→ Talent is the new bottleneck. Upskilling isn't optional anymore.\n\nThe businesses winning today aren't the ones with the biggest budgets. They're the ones moving fastest.\n\nWhere are you in your journey? Drop a comment — let's talk.`,
       hashtags: ['#Innovation', '#Leadership', '#FutureOfWork', '#DigitalTransformation', '#Growth']
     },
     product_highlight: {
-      copy: (topic) => `Introducing our approach to ${topic}.\n\nWe built this to solve a problem we kept hearing: [problem].\n\nWhat you get:\n→ [benefit 1]\n→ [benefit 2]\n→ [benefit 3]\n\nReady to see it in action? Learn more in the comments or DM us.`,
+      copy: (topic) => `Introducing our approach to ${topic}.\n\nWe built this to solve real problems: teams spending hours on manual work, inconsistent results, and scaling bottlenecks.\n\nWhat you get:\n→ Faster delivery with less effort\n→ Consistent, professional output\n→ Scalable solutions that grow with you\n\nReady to see it in action? Learn more in the comments or DM us. We're happy to show you how it works.`,
       hashtags: ['#ProductLaunch', '#Innovation', '#Tech', '#SaaS', '#Startup']
     },
     tip_insight: {
-      copy: (topic) => `One lesson we learned about ${topic}:\n\n[Key insight or tip]\n\nWhy it matters: [reason]\n\nSave this for later. Share if it helped.\n\n#Tip #Insight #Learning`,
+      copy: (topic) => `One lesson we learned about ${topic}:\n\nStart small. Test one process, measure the impact, then scale what works.\n\nWhy it matters: Big launches fail when you try to change everything at once. Small wins build momentum and prove the value before you invest more.\n\nSave this for later. Share if it helped.\n\nWhat's one small change you've made that had a big impact? Drop it in the comments.`,
       hashtags: ['#Tip', '#Insight', '#Learning', '#ProfessionalDevelopment', '#Growth']
     }
   };
@@ -103,15 +103,21 @@
       const topic = topicInput.value.trim() || 'industry insights';
       const type = postTypeSelect.value;
 
-      copyEl.value = getCopy(topic, type);
-      hashtagsEl.textContent = getHashtags(topic, type).join(' ');
-      seoEl.textContent = getSeoKeywords(topic);
-      optimalTimeEl.textContent = getOptimalTime();
+      const copyText = getCopy(topic, type);
+      const hashtagText = getHashtags(topic, type).join(' ');
+      const seoText = getSeoKeywords(topic);
+      const timeText = getOptimalTime();
+
+      copyEl.value = copyText;
+      copyEl.placeholder = '';
+      hashtagsEl.textContent = hashtagText;
+      seoEl.textContent = 'SEO: ' + seoText;
+      optimalTimeEl.textContent = timeText;
 
       drawImage(canvas, topic, 'Professional post for LinkedIn · LaravisionX', 'LaravisionX');
 
       outputSection.classList.add('visible');
-      outputSection.scrollIntoView({ behavior: 'smooth' });
+      outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     document.querySelectorAll('.copyBtn').forEach(btn => {
