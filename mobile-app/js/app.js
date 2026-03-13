@@ -134,6 +134,24 @@
       link.href = canvas.toDataURL('image/png');
       link.click();
     });
+
+    document.getElementById('clearCacheBtn').addEventListener('click', async () => {
+      try {
+        if ('caches' in window) {
+          const names = await caches.keys();
+          await Promise.all(names.map((n) => caches.delete(n)));
+        }
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map((r) => r.unregister()));
+        }
+        localStorage.clear();
+        sessionStorage.clear();
+        window.location.reload(true);
+      } catch (e) {
+        window.location.reload(true);
+      }
+    });
   }
 
   if (document.readyState === 'loading') {
