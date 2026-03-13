@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": null,
+  "rewrites": [
+    { "source": "/", "destination": "/mobile-app/index.html" },
+    { "source": "/index.html", "destination": "/mobile-app/index.html" },
+    { "source": "/manifest.json", "destination": "/mobile-app/manifest.json" },
+    { "source": "/css/:path*", "destination": "/mobile-app/css/:path*" },
+    { "source": "/js/:path*", "destination": "/mobile-app/js/:path*" },
+    { "source": "/sw.js", "destination": "/mobile-app/sw.js" }
+  ]
+}

@@ -241,6 +241,24 @@ body {
   height: auto;
   max-width: 100%;
 }
+.video-wrap {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  background: #000;
+}
+#postVideo {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+}
+.pexels-credit {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+.pexels-credit a { color: var(--text-muted); }
 
 /* Footer */
 .footer {
@@ -274,6 +292,31 @@ body {
 .clearCacheBtn:hover {
   background: var(--bg);
   color: var(--text);
+}
+.settings-details {
+  margin: 12px 0 16px;
+  font-size: 12px;
+  text-align: left;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.settings-details summary {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.settings-details label {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+.settings-details input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
 }
 
 /* Responsive */

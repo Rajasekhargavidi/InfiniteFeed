@@ -7,6 +7,9 @@ node_modules/
 .env.*.local
 *.pem
 
+# Pexels API key (never commit)
+mobile-app/config.local.js
+
 # IDE and OS
 .idea/
 .vscode/
