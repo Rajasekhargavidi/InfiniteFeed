@@ -13,6 +13,8 @@
 
 **Result:** `https://laravisionx.com/digital-marketing-agent/`
 
+**Mobile app link to add:** https://rajasekhargavidi.github.io/InfiniteFeed/
+
 ---
 
 ## Method 2: Classic Editor

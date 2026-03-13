@@ -23,7 +23,7 @@ A Progressive Web App that generates LinkedIn posts **offline**. No API keys, no
 
 ## Hosting Options (Free)
 
-- **GitHub Pages** — Push to repo, enable Pages, get `https://username.github.io/Infinte/mobile-app/`
+- **GitHub Pages** — Push to repo, enable Pages. App is at root: `https://rajasekhargavidi.github.io/InfiniteFeed/`
 - **Netlify** — Drag & drop the folder
 - **Vercel** — Connect repo
 - **Your WordPress** — Upload to a subfolder
