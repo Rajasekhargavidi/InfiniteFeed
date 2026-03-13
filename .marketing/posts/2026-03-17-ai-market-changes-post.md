@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 ## Post: 2026-03-17 — AI Market Changes
 
 **Platform:** LinkedIn  
@@ -10,8 +9,9 @@
 ### Image brief
 
 - **Dimensions:** 1200×627
-- **Style:** Professional, modern, bold gradient (dark blue to purple)
-- **Elements:** Abstract AI/tech visual, headline text overlay, LaravisionX accent
+- **Style:** Professional, high-clarity, corporate. Sharp, readable, no blur or abstract art.
+- **Elements:** Clear headline text overlay, subtle tech/AI visual, LaravisionX accent. High contrast, readable typography.
+- **Avoid:** Blurry images, abstract art, unclear visuals, low resolution.
 - **Alt text:** LinkedIn post about AI transforming business markets in 2026
 
 ---
@@ -64,4 +64,3 @@ Where are you in your AI journey? Drop a comment — let's talk.
 
 **Asking for help:**  
 "Happy to help! We offer AI integration consulting and training. Drop a DM or visit laravisionx.com — we can set up a quick call."
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

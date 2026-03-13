@@ -1,4 +1,3 @@
-// AI Generated Code by Deloitte + Cursor (BEGIN)
 /**
  * Prepares full post context: copy, hashtags, SEO keywords, image brief, CTA.
  * Reads company profile and topic, outputs structured post ready for scheduling.
@@ -37,9 +36,10 @@ function prepareOutput(topic, postType, profile) {
     platform: 'LinkedIn',
     imageDimensions: { width: 1200, height: 627 },
     imageBrief: {
-      style: 'professional, clean, on-brand',
-      elements: `Headline related to: ${topic}. Supporting visual or icon.`,
+      style: 'Professional, high-clarity, corporate. No blur, no abstract art. Sharp, readable, clean.',
+      elements: `Clear headline related to: ${topic}. Supporting visual or icon. High contrast, readable text.`,
       altText: `LinkedIn post image about ${topic}`,
+      avoid: 'Blurry images, abstract art, unclear visuals, low resolution, cluttered design.',
     },
     copyTemplate: {
       hook: `[First 1-2 lines: ${typeConfig.hook}. LinkedIn truncates after ~3 lines.]`,
@@ -62,4 +62,3 @@ function main() {
 }
 
 main();
-// AI Generated Code by Deloitte + Cursor (END)

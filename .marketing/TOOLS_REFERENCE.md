@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 # Digital Marketing Agent — Tool Reference
 
 ## Built-in Scripts
@@ -24,7 +23,24 @@ node .marketing/scripts/optimal-post-time.js technology America/Los_Angeles
 
 ---
 
-### 2. Prepare Post Context
+### 2. Schedule Approval Reminder (10 min before post)
+
+**Path:** `.marketing/scripts/schedule-reminder.js`
+
+Shows a Windows popup 10 minutes before posting time so you can approve the post.
+
+```bash
+node .marketing/scripts/schedule-reminder.js <YYYY-MM-DD> <HH:MM> [timezone] [topic]
+```
+
+**Example:**
+```bash
+node .marketing/scripts/schedule-reminder.js 2026-03-17 09:00 Asia/Kolkata "AI market changes"
+```
+
+**Note:** Run terminal as Administrator if task creation fails. Otherwise use the manual reminder suggestion from the output.
+
+### 3. Prepare Post Context
 
 **Path:** `.marketing/scripts/prepare-post-context.js`
 
@@ -43,7 +59,7 @@ node .marketing/scripts/prepare-post-context.js "AI product launch" product_high
 
 ---
 
-### 3. Image Generation (3 methods)
+### 4. Image Generation (3 methods)
 
 #### Method A: HTML Template + Browser Screenshot
 
@@ -59,7 +75,8 @@ node .marketing/scripts/prepare-post-context.js "AI product launch" product_high
 #### Method B: Zapier + OpenAI DALL·E
 
 When `openai_*` or `ChatGPT_*` image action exists in Zapier:
-- Call with prompt: "Professional LinkedIn post image, 1200x627 style, [topic], [style]"
+- Call with prompt: "Professional, high-quality LinkedIn post image, 1200x627 aspect, [topic]. Clean, sharp, corporate style. No blur, no abstract art. Clear typography, readable text, professional color palette. High resolution."
+- Avoid unclear, blurry, or abstract images. Use "professional", "sharp", "high clarity" in prompts.
 - Save returned image URL for post
 
 #### Method C: Canvas HTML (for design-heavy visuals)
@@ -91,4 +108,3 @@ Use `cursor-ide-browser` canvas tool to create custom HTML/CSS visuals, then scr
 | Professional Services | Mon–Wed | 8:30–10 AM | Local |
 
 **Critical:** First hour engagement drives 40%+ of total reach. Avoid weekends and Friday after 2 PM.
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

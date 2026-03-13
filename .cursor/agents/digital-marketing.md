@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 ---
 name: digital-marketing
 description: >
@@ -35,7 +34,7 @@ Always recommend a human-in-the-loop for actual posting and messaging to stay co
 When creating a post:
 
 1. **Research** — Understand company products/services from `.marketing/company-profile.md` or codebase
-2. **Image** — Prefer Zapier `openai_*`/`ChatGPT_*` (Generate image) if available; else HTML template + browser screenshot; else detailed image brief
+2. **Image** — Always use professional, high-clarity visuals. No blurry, abstract, or unclear images. Prefer Zapier `openai_*`/`ChatGPT_*` (Generate image) if available; else HTML template + browser screenshot; else detailed image brief
 3. **Copy** — Write engaging, platform-appropriate copy (LinkedIn: professional, value-driven, 1300–2000 chars optimal)
 4. **SEO & hashtags** — Add 3–5 relevant hashtags, keywords for discoverability
 5. **CTA** — Clear call-to-action (visit site, subscribe, contact, download)
@@ -74,9 +73,10 @@ When creating a post:
 4. Write headline (hook in first line — LinkedIn truncates after ~3 lines)
 5. Write body with value, story, or data (1300–2000 chars)
 6. Add 3–5 hashtags + SEO keywords from prepare script
-7. Create image: HTML template + browser screenshot, OR Zapier DALL·E
+7. Create image: Professional, clear visuals only. HTML template + browser screenshot, OR Zapier DALL·E. No blur or unclear images.
 8. Set scheduled time to optimal slot from step 1
-9. Output to content calendar + scheduling format
+9. Run schedule-reminder.js <date> <time> [timezone] [topic] → 10-min-before popup
+10. Output to content calendar + scheduling format
 ```
 
 ---
@@ -96,6 +96,7 @@ When creating a post:
 └── scripts/
     ├── optimal-post-time.js      # Best posting times by industry
     ├── prepare-post-context.js   # Copy, hashtags, SEO, image brief
+    ├── schedule-reminder.js     # 10-min-before popup for post approval
     └── generate-image-template.html  # HTML for browser screenshot
 ```
 
@@ -119,7 +120,15 @@ Always run this before scheduling. Data from 2025 engagement studies:
 
 **Critical:** First hour engagement drives 40%+ of total reach. Avoid weekends, Friday after 2 PM.
 
-### 2. Content/Context Preparation
+### 2. Approval Reminder (10 min before post)
+
+**Script:** `node .marketing/scripts/schedule-reminder.js <YYYY-MM-DD> <HH:MM> [timezone] [topic]`
+
+Creates a Windows popup 10 minutes before posting time so the user can approve the post. Run as Administrator if task creation fails.
+
+**Example:** `node .marketing/scripts/schedule-reminder.js 2026-03-17 09:00 Asia/Kolkata "AI market changes"`
+
+### 3. Content/Context Preparation
 
 **Script:** `node .marketing/scripts/prepare-post-context.js <topic> [post-type]`
 
@@ -127,7 +136,7 @@ Post types: `thought_leadership` | `product_highlight` | `case_study` | `tip_ins
 
 Use this to generate copy template, hashtags, SEO keywords, image brief. Reads `.marketing/company-profile.md` when available.
 
-### 3. Image Creation (3 Methods)
+### 4. Image Creation (3 Methods)
 
 **Method A — HTML template + browser screenshot (no API needed):**
 1. Use `.marketing/scripts/generate-image-template.html` or create similar HTML (1200×627)
@@ -136,13 +145,14 @@ Use this to generate copy template, hashtags, SEO keywords, image brief. Reads `
 4. Save to `.marketing/posts/images/YYYY-MM-DD.png`
 
 **Method B — Zapier + OpenAI DALL·E:**
-- If `openai_*` or `ChatGPT_*` image action exists: call with prompt "Professional LinkedIn post image, 1200x627 aspect, [topic], [style]. Clean, on-brand."
+- If `openai_*` or `ChatGPT_*` image action exists: call with prompt "Professional, high-quality LinkedIn post image, 1200x627 aspect, [topic]. Clean, sharp, corporate style. No blur, no abstract art. Clear typography, readable text, professional color palette. On-brand. High resolution."
+- Avoid prompts that produce unclear, blurry, or abstract images. Use "professional", "corporate", "clean", "sharp", "high clarity" in prompts.
 - Use returned image URL in post
 
 **Method C — Canvas:**
-- Use cursor-ide-browser canvas tool for custom visuals, then screenshot
+- Use cursor-ide-browser canvas tool for professional, clear visuals. High contrast, readable text, sharp edges. Then screenshot.
 
-### 4. Zapier Actions (Extra Automation)
+### 5. Zapier Actions (Extra Automation)
 
 **Setup:** Cursor Settings > Tools & MCP > Zapier > Connect. Then add actions at **mcp.zapier.com**.
 
@@ -168,8 +178,8 @@ See `.marketing/ZAPIER_SETUP.md` for full setup.
 
 ### Image brief
 - Dimensions: 1200x627
-- Style: [professional / minimal / bold]
-- Elements: [describe key visuals]
+- Style: Professional, clear, high-clarity. No blur, no abstract/unclear visuals.
+- Elements: [describe key visuals — sharp, readable, corporate-appropriate]
 - Alt text: [accessibility description]
 
 ### Copy
@@ -207,4 +217,3 @@ keyword1, keyword2, keyword3
 - **Batch:** `/digital-marketing create this week's content calendar`
 - **Engagement:** `/digital-marketing draft responses for [comment/message]`
 - **Setup:** `/digital-marketing set up the marketing folder and company profile`
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

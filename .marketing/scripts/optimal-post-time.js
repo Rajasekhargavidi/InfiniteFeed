@@ -1,4 +1,3 @@
-// AI Generated Code by Deloitte + Cursor (BEGIN)
 /**
  * Calculates optimal LinkedIn posting times for maximum reach.
  * Based on 2025 engagement data: Tue-Thu, 8-11 AM and 12-2 PM local.
@@ -95,4 +94,3 @@ function main() {
 }
 
 main();
-// AI Generated Code by Deloitte + Cursor (END)

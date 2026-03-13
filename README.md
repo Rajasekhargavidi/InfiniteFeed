@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 # LaravisionX Digital Marketing Agent
 
 Cursor subagent for automated LinkedIn marketing — content creation, optimal posting times, image generation, and Zapier integration.
@@ -27,4 +26,3 @@ node .marketing/scripts/prepare-post-context.js "topic" product_highlight
 ## Target Audience
 
 Founders, marketers, sales professionals, business decision-makers.
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 # Company Profile for Digital Marketing
 
 > LaravisionX — IT domain. Target: founders, marketers, sales, business & client decision-makers.
@@ -76,4 +75,3 @@
 - **Primary:** #LaravisionX #ITConsulting #SoftwareDevelopment #DigitalTransformation
 - **Secondary:** #Founders #Marketing #Sales #B2B #TechStartups
 - **Industry:** #Laravel #VueJS #WebDevelopment #EdTech #DigitalMarketing
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

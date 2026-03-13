@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 # Response Templates for Comments & Messages
 
 ## Comments
@@ -28,4 +27,3 @@
 
 ### Pricing inquiry
 > Thanks for your interest! [Brief value statement]. Our team can share details tailored to your needs. [Link to book/schedule or request info]
-<!-- AI Generated Code by Deloitte + Cursor (END) -->

@@ -1,4 +1,3 @@
-<!-- AI Generated Code by Deloitte + Cursor (BEGIN) -->
 # Zapier Tools Setup for Digital Marketing Agent
 
 Add these Zapier actions at **mcp.zapier.com** (or via Cursor Settings > Tools & MCP > Zapier > Connect) so the digital-marketing agent can use them.
@@ -10,7 +9,7 @@ Add these Zapier actions at **mcp.zapier.com** (or via Cursor Settings > Tools &
 - **App:** OpenAI
 - **Action:** Generate image (DALL·E)
 - **Use:** Creates post images from text prompts
-- **Setup:** Connect OpenAI API key in Zapier. The agent will pass prompt, size (1024x1024 or 1792x1024 for LinkedIn).
+- **Setup:** Connect OpenAI API key in Zapier. The agent will pass prompt, size (1024x1024 or 1792x1024 for LinkedIn). Use prompts that include "professional", "sharp", "high clarity", "no blur" for clear, corporate-style images.
 
 ## 2. Social Posting & Scheduling
 
@@ -78,4 +77,3 @@ Add these Zapier actions at **mcp.zapier.com** (or via Cursor Settings > Tools &
 4. **Use the agent**
    - Run `/digital-marketing create today's LinkedIn post`
    - Agent will use Zapier tools when available for image generation and post scheduling
-<!-- AI Generated Code by Deloitte + Cursor (END) -->
